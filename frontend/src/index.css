@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #faf5ff 0%, #f5f3ff 50%, #ede9fe 100%);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4b5fd;
+  border-radius: 3px;
+}
+
+/* React Calendar custom styles */
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  background: white !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+  padding: 1rem !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.react-calendar__navigation button {
+  color: #7c3aed !important;
+  font-weight: 600 !important;
+  font-size: 1.125rem !important;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #f3e8ff !important;
+  border-radius: 0.5rem !important;
+}
+
+.react-calendar__month-view__weekdays {
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  font-size: 0.75rem !important;
+  color: #a78bfa !important;
+}
+
+.react-calendar__month-view__days__day {
+  color: #374151 !important;
+  font-weight: 500 !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #7c3aed !important;
+}
+
+.react-calendar__tile {
+  border-radius: 0.5rem !important;
+  padding: 0.5rem !important;
+  position: relative !important;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #f3e8ff !important;
+}
+
+.react-calendar__tile--active {
+  background: #7c3aed !important;
+  color: white !important;
+}
+
+.react-calendar__tile--now {
+  background: #ede9fe !important;
+  border: 2px solid #7c3aed !important;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
